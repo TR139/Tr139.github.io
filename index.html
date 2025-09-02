@@ -1,16 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jovie yin's website for cs180 lab0</title> 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Microsoft YaHei', sans-serif; 
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5; 
+            color: #333; 
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 30px;
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50; 
+            margin-bottom: 20px;
+        }
+
+     
+        p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 15px; 
+            justify-content: center; 
+        }
+
+        
+        .gallery img {
+            width: 100%;
+            max-width: 300px; 
+            height: auto; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+
+        
+        .gallery img:hover {
+            transform: scale(1.02);
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My CS180 Portfolio!</h1>
-    <a href="./1/index.html">Project 1</a>
+    <div class="container">
+        <h1>welcome</h1>
+        <p>
+            this is Jovie Yin's website for cs180 lab0
+        </p >
+        <p>
+            there are three sets of photos. first one shows pictures of myself from close up;second one shows of architecture; and the last onee shows a classic film effect called the dolly zoom
+        </p >
+
+     
+        <div class="gallery">
+            < img src="myshelf1.jpg" alt="myshelf1："> 
+            < img src="myshelf2.jpg" alt="myshelf2：">
+            < img src="myshelf3.jpg" alt="myshelf3：">
+            < img src="myshelf4.jpg" alt="myshelf4：">
+            < img src="architecture1.jpg" alt="architecture1："> 
+            < img src="architecture2.jpg" alt="architecturef2：">
+            < img src="architecture3.jpg" alt="architecture3：">
+            < img src="architecture4.jpg" alt="architecture4：">
+            < img src="dollyzoom1.jpg" alt="dollyzoom1："> 
+            < img src="dollyzoom2.jpg" alt="dollyzoom2：">
+            < img src="dollyzoom3.jpg" alt="dollyzoom3：">
+            < img src="dollyzoom4.jpg" alt="dollyzoom4：">
+
+            <!-- 继续添加更多图片... -->
+        </div>
+
+        <!-- 可以添加页脚文字 -->
+        <p style="text-align: center; margin-top: 40px; color: #7f8c8d; font-size: 0.9em;">
+            © 2025 我的实验结果展示网页. 保留所有权利。
+        </p >
+    </div>
 </body>
 </html>
