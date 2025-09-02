@@ -32,9 +32,10 @@
         
         .image-content {
             flex: 1;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
             gap: 15px;
+			flex-wrap: wrap; 
+			justify-content: center; 
         }
         
         .image-content img {
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // 每3秒切换一次
-    setInterval(showSlide, 3000);
+    setInterval(showSlide, 1000);
 });
 </script>
 </html>
