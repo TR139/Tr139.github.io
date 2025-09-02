@@ -91,10 +91,14 @@
         
 	/* 视频/轮播样式 */
         .slideshow-container {
-            grid-column: 1 / -1; /* 跨所有列 */
-            width: 100%;
-            height: 250px;
-            position: relative;
+			width: 100%;
+			max-width: 400px;
+			height: 300px;
+			position: relative;
+			background: #f8f9fa;
+			border-radius: 8px; 
+			overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
          }
  
        .slide {
@@ -182,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide = (currentSlide + 1) % slides.length;
     }
     
-    // 每3秒切换一次
+    // 每1秒切换一次
     setInterval(showSlide, 1000);
 });
 </script>
