@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
 
-       text-image-section {
+        .text-image-section {
             margin: 40px 0;
             display: flex;
             align-items: center;
@@ -34,8 +34,8 @@
             flex: 1;
             display: flex;
             gap: 15px;
-			flex-wrap: wrap; 
-			justify-content: center; 
+            flex-wrap: wrap; 
+            justify-content: center; 
         }
         
         .image-content img {
@@ -45,14 +45,11 @@
             border-radius: 5px; 
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
             transition: transform 0.3s ease; 
-
         }
        
         .image-content img:hover {
             transform: scale(1.02);
         }
-
-
         
         /* 字体大小设置 */
         .main-title { /* 主标题 */
@@ -87,98 +84,99 @@
             padding: 30px;
             border-radius: 8px; 
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            position: relative; /* 确保容器是定位上下文 */
         }
         
-	/* 视频/轮播样式 */
+        /* 修改后的轮播样式 */
         .slideshow-container {
-			width: 100%;
-			max-width: 400px;
-			height: 300px;
-			position: relative;
-			background: #f8f9fa;
-			border-radius: 8px; 
-			overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            position: relative; /* 关键：为绝对定位的子元素提供参照 */
+            background: #f8f9fa;
+            border-radius: 8px; 
+            overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-         }
+            margin: 0 auto; /* 居中显示 */
+        }
  
-       .slide {
-           position: absolute;
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           border-radius: 8px;
-           opacity: 0;
-           transition: opacity 1s ease-in-out;
-       }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
  
-     .slide:first-child {
-           opacity: 1;
-      }
+        .slide:first-child {
+            opacity: 1;
+        }
+        
+        /* 确保轮播图容器在flex布局中正确显示 */
+        .slideshow-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>welcome</h1>
 
-   <div class="text-image-section">
-        <div class="text-content">
-            <h2 class="section-title">part1</h2>
-            <p class="chapter-intro">Selfie: The Wrong Way vs. The Right Way</p >
-            <p class="normal-text">Ever snapped a selfie and thought, “Wait, is my nose really that big?” Spoiler: It’s not—your phone’s lens is just playing tricks!
-Here’s the lowdown: When you hold your phone super close to your face (y’know, the classic “arm’s length” selfie move), the lens acts like a tiny funhouse mirror. The parts of your face that stick out most—like your nose or forehead—are way closer to the lens than cheeks or jawline. Since the lens magnifies closer things more, those prominent bits get “blown up” while the rest stays normal. Suddenly, your face looks lopsided, and that cute button nose turns into a giant feature.
-But fix it? Easy! Take a step back (no need to march across the room—just a few feet!), then use your phone’s zoom to pull your face back into the frame. Now, every part of your face is roughly the same distance from the lens. No more weird magnification, no more distorted features—just a selfie that actually looks like you. See? No magic, just a tiny tweak to your photo-taking routine!
-</p >
+        <div class="text-image-section">
+            <div class="text-content">
+                <h2 class="section-title">part1</h2>
+                <p class="chapter-intro">Selfie: The Wrong Way vs. The Right Way</p>
+                <p class="normal-text">Ever snapped a selfie and thought, "Wait, is my nose really that big?" Spoiler: It's not—your phone's lens is just playing tricks!
+                Here's the lowdown: When you hold your phone super close to your face (y'know, the classic "arm's length" selfie move), the lens acts like a tiny funhouse mirror. The parts of your face that stick out most—like your nose or forehead—are way closer to the lens than cheeks or jawline. Since the lens magnifies closer things more, those prominent bits get "blown up" while the rest stays normal. Suddenly, your face looks lopsided, and that cute button nose turns into a giant feature.
+                But fix it? Easy! Take a step back (no need to march across the room—just a few feet!), then use your phone's zoom to pull your face back into the frame. Now, every part of your face is roughly the same distance from the lens. No more weird magnification, no more distorted features—just a selfie that actually looks like you. See? No magic, just a tiny tweak to your photo-taking routine!
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="myself1.jpg" alt="myself1"/> 
+                <img src="myself2.jpg" alt="myself2"/>
+                <img src="myself3.jpg" alt="myself3"/>
+                <img src="myself4.jpg" alt="myself4"/>
+            </div>
         </div>
-        <div class="image-content">
-            <img src="myself1.jpg" alt="myself1："/> 
-            <img src="myself2.jpg" alt="myself2："/>
-            <img src="myself3.jpg" alt="myself3："/>
-            <img src="myself4.jpg" alt="myself4："/>
-        </div>
-   </div>
 
-   <div class="text-image-section">
-        <div class="text-content">
-            <h2 class="section-title">part2</h2>
-            <p class="chapter-intro">Architectural Perspective Compression</p >
-            <p class="normal-text">this is Jovie Yin's website for cs180 lab0</p >
+        <div class="text-image-section">
+            <div class="text-content">
+                <h2 class="section-title">part2</h2>
+                <p class="chapter-intro">Architectural Perspective Compression</p>
+                <p class="normal-text">this is Jovie Yin's website for cs180 lab0</p>
+            </div>
+            <div class="image-content">
+                <img src="architecture1.jpg" alt="architecture1"/> 
+                <img src="architecture2.jpg" alt="architecture2"/>
+                <img src="architecture3.jpg" alt="architecture3"/>
+                <img src="architecture4.jpg" alt="architecture4"/>
+            </div>
         </div>
-        <div class="image-content">
-            <img src="architecture1.jpg" alt="architecture1："/> 
-            <img src="architecture2.jpg" alt="architecture2："/>
-            <img src="architecture3.jpg" alt="architecture3："/>
-            <img src="architecture4.jpg" alt="architecture4："/>
-        </div>
-    </div>
 
-    <div class="text-image-section">
-        <div class="text-content">
-            <h2 class="section-title">part3</h2>
-            <p class="chapter-intro">The Dolly Zoom</p >
-            <p class="normal-text">this is Jovie Yin's website for cs180 lab0</p >
+        <div class="text-image-section">
+            <div class="text-content">
+                <h2 class="section-title">part3</h2>
+                <p class="chapter-intro">The Dolly Zoom</p>
+                <p class="normal-text">this is Jovie Yin's website for cs180 lab0</p>
+            </div>
+            <div class="slideshow-wrapper">
+                <div class="slideshow-container">
+                    <img class="slide" src="dollyzoom1.jpg" alt="Dolly Zoom 1">
+                    <img class="slide" src="dollyzoom2.jpg" alt="Dolly Zoom 2">
+                    <img class="slide" src="dollyzoom3.jpg" alt="Dolly Zoom 3">
+                    <img class="slide" src="dollyzoom4.jpg" alt="Dolly Zoom 4">
+                </div>
+            </div>
         </div>
-        <div class="image-content">
-            <img class="slide" src="dollyzoom1.jpg" alt="Dolly Zoom 1">
-            <img class="slide" src="dollyzoom2.jpg" alt="Dolly Zoom 2">
-            <img class="slide" src="dollyzoom3.jpg" alt="Dolly Zoom 3">
-            <img class="slide" src="dollyzoom4.jpg" alt="Dolly Zoom 4">
-        </div>
-		<div class="text-content">
-            <h2 class="section-title"> </h2>
-            <p class="chapter-intro"> </p >
-            <p class="normal-text"> </p >
-			<p class="normal-text"> </p >
-			<p class="normal-text"> </p >
-			<p class="normal-text"> </p >
-			<p class="normal-text"> </p >
-        </div>
-   </div>
-
        
         <!-- 可以添加页脚文字 -->
         <p style="text-align: center; margin-top: 40px; color: #7f8c8d; font-size: 0.9em;">
             © 2025 我的实验结果展示网页. 保留所有权利。
-        </p >
+        </p>
     </div>
 </body>
 <script>
